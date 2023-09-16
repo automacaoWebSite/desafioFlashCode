@@ -19,7 +19,8 @@ public class Metodos {
 	
 	public void clicar(By elemento) {
 		driver.findElement(elemento).click();
-			
+		
+		
 	}
 	
 	public void pausar(int tempo)throws InterruptedException{
@@ -35,7 +36,7 @@ public class Metodos {
 
     public void scrool() {
 	JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-    jsExecutor.executeScript("window.scrollBy(0, 3000);");
+    jsExecutor.executeScript("window.scrollBy(0, 1800);");
     
     }
 	
