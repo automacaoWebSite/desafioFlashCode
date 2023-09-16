@@ -17,50 +17,62 @@ public class Testes {
 		System.out.println("=========================");
 		System.out.println("Aguarde Abrindo site !!!");
 		System.out.println("=========================");
-    m.abrindoNavegador(url);
-		
+		m.abrindoNavegador(url);
 		
 	}
 
 	@Quando("^eu preencher o nome do produto desejado Tênis Air Botinha$")
 	public void eu_preencher_o_nome_do_produto_desejado_Tênis_Air_Botinha() throws Throwable {
-		System.out.println("Buscar Produtos OK");
+	    System.out.println("=========================");		
         m.preencher(e.getBuscarProdutos(), "Tênis Air Botinha");
-			
-	}
+        System.out.println("Buscar Produtos OK");
+        Thread.sleep(1000);
+			}
 
 	@Quando("^clicar em pesquisar$")
 	public void clicar_em_pesquisar() throws Throwable {
+	
+	    m.clicar(e.getBtnPesquisar());
 		System.out.println("Btn Pesquisar OK");
-	    m.clicar(e.getBtnPesquisar());		
+		Thread.sleep(1000);
 	}
 	
 	@Quando("^clicar no produto desejado$")
 	public void clicar_no_produto_desejado() throws Throwable {
-		System.out.println("Btn Produto OK");
+		
 		m.clicar(e.getBtnProduto());
+		System.out.println("Btn Produto OK");
+		Thread.sleep(1000);
 	}
 
 	@Quando("^escolher as características do produto$")
 	public void escolher_as_características_do_produto() throws Throwable {
-		System.out.println("Cor Produto OK");
+		
 		m.clicar(e.getCorProduto());
-		System.out.println("Clicar Tamanho OK");
-		m.clicar(e.getClicarTamanho());
-		m.scrool();
-		System.out.println("Aba Produto OK");
-		m.clicar(e.getAbaProduto());
+		System.out.println("Cor Produto OK");
 		Thread.sleep(1000);
-		System.out.println("Quantidade Produto OK");
+		
+		m.clicar(e.getClicarTamanho());
+		System.out.println("Clicar Tamanho OK");
+		Thread.sleep(1000);
+		
+		m.scrool();
+		m.clicar(e.getAbaProduto());
+		System.out.println("Aba Produto OK");
+		Thread.sleep(1000);
+		
 		m.clicar(e.getQuantidadeProduto());
+		System.out.println("Quantidade Produto OK");
 		Thread.sleep(1000);
 	}
 
 	@Quando("^clicar no botão de \"([^\"]*)\"$")
 	public void clicar_no_botão_de(String arg1) throws Throwable {
 		
-		System.out.println("Btn Comprar OK");
+	
 		m.clicar(e.getBtnComprar());
+		System.out.println("Btn Comprar OK");
+		Thread.sleep(1000);
 		
 		System.out.println("======================");
 		System.out.println("Aguarde finalizando...");
@@ -77,10 +89,8 @@ public class Testes {
 		System.out.println("Cadastro finalizado com sucesso !!!");
 		System.out.println("===================================");
 	
-	}
-		
-		
-		
+	     }
+			
 	}
 
 	

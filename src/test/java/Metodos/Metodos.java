@@ -10,34 +10,27 @@ public class Metodos {
 	WebDriver driver;
 	
 	public void abrindoNavegador (String url) {
-		System.setProperty("webdriver.chrome.driver" , "C:\\Users\\ellbe\\Desktop\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
-				
-	}
+		}
 	
 	public void clicar(By elemento) {
 		driver.findElement(elemento).click();
-		
-		
-	}
+		}
 	
 	public void pausar(int tempo)throws InterruptedException{
 		Thread.sleep(tempo);
-		
-	}
+		}
 	
 	public void preencher(By elemento, String texto) {
 		driver.findElement(elemento).sendKeys(texto);
-			
-	}
+		}
 	
-
     public void scrool() {
 	JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-    jsExecutor.executeScript("window.scrollBy(0, 1800);");
-    
+    jsExecutor.executeScript("window.scrollBy(0, 2200);");
     }
 	
 	public void fecharNavegador() {
