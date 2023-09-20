@@ -24,7 +24,7 @@ public class Testes {
 	@Quando("^eu preencher o nome do produto desejado Tênis Air Botinha$")
 	public void eu_preencher_o_nome_do_produto_desejado_Tênis_Air_Botinha() throws Throwable {
 	    System.out.println("=========================");		
-        m.preencher(e.getBuscarProdutos(), "Tênis Air Botinha");
+        m.preencher(e.getBuscarProdutos(), "Tenis Retro 4 Masculino Botinha Basquete Air High Promoçao");
         System.out.println("Buscar Produtos OK");
         Thread.sleep(1000);
 			}
