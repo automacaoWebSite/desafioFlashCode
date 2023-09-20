@@ -1,6 +1,6 @@
 # language : pt
 
-@tag
+ @tag
  Funcionalidade: efetuando uma compra 
  
  @tag1
